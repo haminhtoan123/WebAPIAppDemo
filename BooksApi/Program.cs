@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace TodoApi
+namespace BooksApi
 {
     public class Program
     {
@@ -23,5 +23,4 @@ namespace TodoApi
                     webBuilder.UseStartup<Startup>();
                 });
     }
-    
 }

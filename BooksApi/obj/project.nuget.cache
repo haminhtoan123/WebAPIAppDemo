@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YYmzrBLkE54L/DxR9ZgH1qADuW8vCwF/6dAn52AXepIiODwi9xPrp2xHQ4z1ttViKV23QNAHOBRo0m5o0Nx9Ww==",
+  "dgSpecHash": "Tbr8fd1i7BS4oEpovLjEChqPt8bS0U8f5K/7ZRs5eBa5kluiGUsHk+NtpxHRV2CrOIbdvjxmxjs0bl+/2B8SeQ==",
   "success": true,
-  "projectFilePath": "/home/noat/NETDEMO/WebAPIAppDemo/BooksApi/BooksApi.csproj",
+  "projectFilePath": "/home/noat/NETDEMO/WebAPIAppDemo/BooksApi/HeroesApi.csproj",
   "expectedPackageFiles": [
     "/home/noat/.nuget/packages/dnsclient/1.4.0/dnsclient.1.4.0.nupkg.sha512",
     "/home/noat/.nuget/packages/microsoft.aspnetcore.jsonpatch/5.0.6/microsoft.aspnetcore.jsonpatch.5.0.6.nupkg.sha512",

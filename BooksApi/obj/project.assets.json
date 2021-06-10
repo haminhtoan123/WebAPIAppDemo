@@ -849,9 +849,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/noat/NETDEMO/WebAPIAppDemo/BooksApi/BooksApi.csproj",
-      "projectName": "BooksApi",
-      "projectPath": "/home/noat/NETDEMO/WebAPIAppDemo/BooksApi/BooksApi.csproj",
+      "projectUniqueName": "/home/noat/NETDEMO/WebAPIAppDemo/BooksApi/HeroesApi.csproj",
+      "projectName": "HeroesApi",
+      "projectPath": "/home/noat/NETDEMO/WebAPIAppDemo/BooksApi/HeroesApi.csproj",
       "packagesPath": "/home/noat/.nuget/packages/",
       "outputPath": "/home/noat/NETDEMO/WebAPIAppDemo/BooksApi/obj/",
       "projectStyle": "PackageReference",

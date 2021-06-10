@@ -11,10 +11,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using BooksApi.Models;
-using BooksApi.Services;
+using HeroesApi.Services;
+using HeroesApi.Models;
+
 using Microsoft.Extensions.Options;
-namespace BooksApi
+namespace HeroesApi
 {
     public class Startup
     {
@@ -28,35 +29,48 @@ namespace BooksApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+
+            services.AddCors(c =>  
+            {  
+                c.AddPolicy("AllowOrigin", options => options.WithOrigins("http://localhost:4200")
+                                        .AllowAnyHeader()
+                                        .AllowAnyMethod() );
+                                        //AllowAnyOrigin());  
+                                        
+            });
+
             // requires using Microsoft.Extensions.Options
-            services.Configure<BookstoreDatabaseSettings>(
-                Configuration.GetSection(nameof(BookstoreDatabaseSettings)));
+            services.Configure<HeroesDatabaseSettings>(
+                Configuration.GetSection(nameof(HeroesDatabaseSettings)));
 
-            services.AddSingleton<IBookstoreDatabaseSettings>(sp =>
-                sp.GetRequiredService<IOptions<BookstoreDatabaseSettings>>().Value);
-                
-            services.AddSingleton<BookService>();
+            services.AddSingleton<IHeroesDatabaseSettings>(sp =>
+                sp.GetRequiredService<IOptions<HeroesDatabaseSettings>>().Value);
+            services.AddSingleton<HeroService>();
 
-            services.AddControllers().AddNewtonsoftJson(options => options.UseMemberCasing());
+            services.AddControllers();
+            services.AddSwaggerGen();
 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
+            app.UseSwagger();
+            app.UseSwaggerUI(c => 
             {
-                app.UseDeveloperExceptionPage();
-                // app.UseSwagger();
-                // app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "BooksApi v1"));
-            }
-            else
-            {
-                app.UseHsts();
-            }
-            app.UseHttpsRedirection();
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "HeroesApi v1");
+                    c.RoutePrefix = string.Empty;
+            });
+
+
 
             app.UseRouting();
+
+
+            app.UseCors();
+            //options => options.AllowAnyOrigin());  
+            app.UseHttpsRedirection();
 
             app.UseAuthorization();
 

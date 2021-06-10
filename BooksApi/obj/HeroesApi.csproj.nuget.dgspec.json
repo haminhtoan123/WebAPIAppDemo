@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "/home/noat/NETDEMO/WebAPIAppDemo/BooksApi/BooksApi.csproj": {}
+    "/home/noat/NETDEMO/WebAPIAppDemo/BooksApi/HeroesApi.csproj": {}
   },
   "projects": {
-    "/home/noat/NETDEMO/WebAPIAppDemo/BooksApi/BooksApi.csproj": {
+    "/home/noat/NETDEMO/WebAPIAppDemo/BooksApi/HeroesApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/noat/NETDEMO/WebAPIAppDemo/BooksApi/BooksApi.csproj",
-        "projectName": "BooksApi",
-        "projectPath": "/home/noat/NETDEMO/WebAPIAppDemo/BooksApi/BooksApi.csproj",
+        "projectUniqueName": "/home/noat/NETDEMO/WebAPIAppDemo/BooksApi/HeroesApi.csproj",
+        "projectName": "HeroesApi",
+        "projectPath": "/home/noat/NETDEMO/WebAPIAppDemo/BooksApi/HeroesApi.csproj",
         "packagesPath": "/home/noat/.nuget/packages/",
         "outputPath": "/home/noat/NETDEMO/WebAPIAppDemo/BooksApi/obj/",
         "projectStyle": "PackageReference",
